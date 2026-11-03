@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>eGerak Pro | Sistem Pergerakan Guru &amp; Kakitangan Sekolah</title>
-<meta name="description" content="Rekod pergerakan, tugas luar dan cuti guru terus dari telefon. Pentadbir nampak keberadaan semua kakitangan dalam satu paparan. Perkongsian percuma untuk sekolah.">
+<meta name="description" content="Rekod pergerakan, tugas luar dan cuti guru terus dari telefon. Digunakan lebih 643 sekolah. Perkongsian percuma untuk sekolah.">
 <meta name="theme-color" content="#2a1203">
 <link rel="canonical" href="https://cikgumie.github.io/egerakpro/">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="eGerak Pro: “Cikgu ada di mana?”">
-<meta property="og:description" content="Rekod pergerakan guru dan kakitangan terus dari telefon. Perkongsian percuma untuk sekolah.">
+<meta property="og:description" content="Rekod pergerakan guru dan kakitangan terus dari telefon. Digunakan lebih 643 sekolah. Percuma.">
 <meta property="og:url" content="https://cikgumie.github.io/egerakpro/">
 <meta property="og:image" content="https://cikgumie.github.io/egerakpro/assets/og-egerak.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -103,6 +103,33 @@ section[id]{scroll-margin-top:84px}
 .sec-head h2{font-size:clamp(33px,4.4vw,52px);margin:10px 0 14px}
 .sec-head p{color:var(--muted);font-size:18px}
 .center{text-align:center;margin-inline:auto}
+
+/* Senarai tempahan */
+.ramai .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.ramai h2{font-size:clamp(33px,4.4vw,52px);margin:10px 0 14px}
+.ramai-copy>p:not(.eyebrow,.kiraan){color:var(--muted);font-size:18px}
+.kiraan{font:800 clamp(84px,11vw,136px)/.95 var(--display);letter-spacing:-.04em;color:var(--amber-dp);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.ramai .btn{margin-top:26px}
+.feed{background:var(--white);border-radius:var(--r);box-shadow:0 0 0 1px var(--line),0 34px 60px -40px rgba(69,26,3,.55);overflow:hidden}
+.feed-head{display:flex;align-items:center;gap:10px;padding:14px 12px 14px 20px;font-weight:800;font-size:15px;border-bottom:1px solid var(--line)}
+.feed-head i{width:9px;height:9px;border-radius:50%;background:#10b981;box-shadow:0 0 0 0 rgba(16,185,129,.55);animation:ping 1.8s infinite}
+.feed.rehat .feed-head i{animation:none;background:#a8a29e}
+@keyframes ping{to{box-shadow:0 0 0 10px rgba(16,185,129,0)}}
+.feed-head button{margin-left:auto;min-height:40px;padding:6px 14px;border:0;border-radius:999px;background:var(--sand);color:var(--ink);font:700 13px var(--body);cursor:pointer}
+.feed ul{list-style:none;margin:0;padding:0;height:344px;overflow:hidden;-webkit-mask:linear-gradient(#000 72%,transparent);mask:linear-gradient(#000 72%,transparent)}
+.feed li{display:flex;align-items:center;gap:13px;height:68px;padding:0 20px;border-bottom:1px solid var(--line)}
+.feed li.masuk{animation:masuk .55s cubic-bezier(.2,.8,.2,1),sinar 2.2s ease-out}
+@keyframes masuk{from{height:0;opacity:0;transform:translateY(-14px)}}
+@keyframes sinar{from{background:#fef3c7}to{background:#fff}}
+.jenis{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:13px;background:var(--brown);color:var(--amber-lt);font:800 12px var(--display)}
+.feed b{display:block;font-size:14.5px;font-weight:700;line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.feed small{display:flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--green)}
+.feed li>span:last-child{min-width:0}
+.semua{margin-top:14px;background:var(--white);border-radius:16px;box-shadow:0 0 0 1px var(--line)}
+.semua summary{min-height:50px;padding:14px 20px;font-size:14.5px;font-weight:700;cursor:pointer}
+.semua div{display:flex;flex-wrap:wrap;gap:6px;max-height:280px;overflow-y:auto;padding:0 20px 18px}
+.semua div span{padding:4px 11px;border-radius:999px;background:var(--sand);font-size:12.5px;font-weight:600}
+@media (max-width:1040px){.ramai .wrap{grid-template-columns:1fr}}
 
 /* Sebelum vs selepas */
 .vs{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:0 0 0 1px var(--line),0 30px 60px -40px rgba(69,26,3,.5)}
@@ -275,6 +302,7 @@ footer a{color:var(--amber-lt)}
   <div class="wrap">
     <a class="brand" href="#utama"><img src="assets/logo.svg" alt="" width="34" height="34"><span>eGerak <em>Pro</em></span></a>
     <nav class="nav-links" aria-label="Utama">
+      <a href="#sekolah">Sekolah</a>
       <a href="#kelebihan">Kelebihan</a>
       <a href="#ciri">Ciri-Ciri</a>
       <a href="#kalkulator">Kalkulator</a>
@@ -289,7 +317,7 @@ footer a{color:var(--amber-lt)}
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="badge"><i></i>Perkongsian percuma untuk sekolah</p>
+      <p class="badge"><i></i>Percuma &bull; Lebih 643 sekolah sudah guna</p>
       <h1>“Cikgu ada di&nbsp;mana?”<span>Kini satu sekolah tahu jawapannya, terus dari telefon.</span></h1>
       <p class="lead">eGerak Pro merekod tugas luar, kursus, mesyuarat dan cuti guru serta kakitangan. Pentadbir nampak keberadaan semua orang dalam satu paparan, dan laporan bulanan sedia untuk dicetak.</p>
       <div class="cta-row">
@@ -312,10 +340,29 @@ footer a{color:var(--amber-lt)}
   <div class="wrap">
     <dl>
       <div><dt>RM0</dt><dd>Sistem dikongsi percuma untuk sekolah</dd></div>
-      <div><dt>91</dt><dd>Warga kerja SMK Seri Damai dalam satu paparan</dd></div>
+      <div><dt>643+</dt><dd>Sekolah sudah menggunakan eGerak Pro</dd></div>
       <div><dt>3</dt><dd>Menu sahaja: Daftar, Dash, Analis</dd></div>
       <div><dt>0</dt><dd>Aplikasi perlu dimuat turun</dd></div>
     </dl>
+  </div>
+</section>
+
+<section class="sec ramai" id="sekolah">
+  <div class="wrap">
+    <div class="ramai-copy rise">
+      <p class="eyebrow">Sudah digunakan</p>
+      <p class="kiraan" id="kiraan">643+</p>
+      <h2>Lebih 643 sekolah sudah menggunakan eGerak Pro.</h2>
+      <p>Dari sekolah kebangsaan hingga kolej tingkatan enam, seluruh Malaysia. Giliran sekolah anda pula.</p>
+      <a class="btn btn-main" href="https://forms.gle/9hP1iFSsBqTjPuf76" target="_blank" rel="noopener">Tempah Untuk Sekolah Saya <svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="rise">
+      <div class="feed" id="feed">
+        <p class="feed-head" style="margin:0"><i></i>Senarai tempahan sekolah<button type="button" id="feedBtn" aria-pressed="false">Jeda</button></p>
+        <ul id="feedList" aria-label="Antara sekolah yang telah menempah"></ul>
+      </div>
+      <details class="semua"><summary>Lihat antara sekolah yang telah menempah (<span id="bilSemua"></span>)</summary><div id="senaraiSemua"></div></details>
+    </div>
   </div>
 </section>
 
@@ -518,7 +565,7 @@ footer a{color:var(--amber-lt)}
 <section class="sec climax">
   <div class="wrap">
     <h2>Bersedia menutup buku log itu?</h2>
-    <p>Isi borang tempahan hari ini. Kalau masih ada soalan, sertai group Telegram untuk maklumat lanjut.</p>
+    <p>Sertai lebih 643 sekolah yang sudah menggunakan eGerak Pro. Kalau masih ada soalan, sertai group Telegram untuk maklumat lanjut.</p>
     <div class="cta-row">
       <a class="btn btn-main" href="https://forms.gle/9hP1iFSsBqTjPuf76" target="_blank" rel="noopener">Isi Borang Tempahan <svg class="ico"><use href="#i-arrow"/></svg></a>
       <a class="btn btn-ghost" href="https://t.me/AppSekolahMalaysia/19289" target="_blank" rel="noopener"><svg class="ico"><use href="#i-tg"/></svg>Sertai Group Telegram</a>
@@ -529,7 +576,7 @@ footer a{color:var(--amber-lt)}
 
 <footer>
   <div class="wrap">
-    <span>eGerak Pro. Perkongsian percuma untuk sekolah.</span>
+    <span>eGerak Pro. Perkongsian percuma, digunakan lebih 643 sekolah.</span>
     <span>Nama guru dalam gambar ialah contoh. <a href="https://t.me/AppSekolahMalaysia/19289" target="_blank" rel="noopener">Telegram</a></span>
   </div>
 </footer>
@@ -580,6 +627,80 @@ function kira() {
 rRekod.addEventListener('input', kira);
 rMinit.addEventListener('input', kira);
 kira();
+
+// Senarai tempahan: nama sebenar daripada borang, dipaparkan satu demi satu
+var SEKOLAH = ["SK BUKIT CHINA", "SM ST FRANCIS XAVIER", "SK GEDOK", "SMK (P) METHODIST", "SM SETIABUDI", "SK ULU SUNGAI SIONG", "SMK KOLOMBONG", "SK TAMAN NIRWANA", "SK KEM PENGKALAN CHEPA", "SMK DATO' SEDIA RAJA", "SK USJ 12", "SK LUBUK KAWAH", "SK ABANG HAJI MATAHIR", "SK 1 SELAYANG BARU", "SMK PUSAT BANDAR PUCHONG 1", "SK LABU BESAR", "SK TANJUNG KERAMAT", "SK BUKIT INKERBAI", "SMK PUTERI WILAYAH", "SK SUNGAI RAMAL DALAM", "SMK BANDAR BARU SULTAN SULEIMAN", "SMA BUGISIAH", "SK WANGSA MELAWATI", "SK DESA PANDAN", "KOLEJ TINGKATAN ENAM TAWAU", "SMK SULTAN SALAHUDDIN ABDUL AZIZ SHAH", "SMK PERMATA JAYA", "SJKT PERSIARAN RAJA MUDA MUSA", "SK (FELDA) JENGKA 17", "SMK PADANG TENGKU", "SMK PENRISSEN", "SK TELAGA ARA", "SMK BUKIT RAMBAI", "SEKOLAH SAINS SULTAN HAJI AHMAD SHAH", "SK POYUT", "SMA DARUL ULUM", "SK SUNGAI BUAYA", "SK SERI DUYONG", "SK BELIMBING", "SK ST BENEDICT RANAU", "SK TAMAN SRI MUDA 2", "SK NANGA ENCHEREMIN", "SK MALAU", "KOLEJ SULTAN ABDUL HAMID", "SK TANJONG KARANG", "SK PAJAR SEJINGKAT", "SK SRI LAKSAMANA", "SK BALOK MAKMUR", "SK PETALING 2", "SMK TEMBANGAU", "SK PUCHONG UTAMA 3", "SMK AGAMA KEDAH", "SM SAINS SABAH", "SK PAMOL", "SRITI AL-HAMBRA", "SMK PUNCAK ALAM", "SK SERI BONUS", "SK TUDAN", "SK KAMPONG POH", "SK TAMAN PELANGI SEMENYIH", "SK FELDA PEMANIS 2", "SK KAMPUNG BAHARU SERADA", "SK KINABUTAN BESAR", "KOLEJ VOKASIONAL SUNGAI BULOH", "SK WAWASAN", "SMK SUNGAI ISAP", "SMK SUNGAI RAMBAI", "SK KUAK LUAR", "SM AGAMA PERSEKUTUAN BENTONG", "SMK KING GEORGE V", "SK (A) BKT CHEDING", "SK JELUTONG", "SK SERI SETIA", "SK JALAN BINTANG", "SMK TAMAN TUANKU JAAFAR", "SMK DATO ABDUL RAHMAN YASSIN", "SMK PERTANG", "SK SERI PANTAI", "SMK BANDAR BARU SUNGAI BULOH", "SK PUSAT CHABANG TIGA", "SK KAMPUNG PALOH", "SMK SUNGAI NIBONG", "SK PEKAN BELURAN", "SJKC POOI MING", "SMK TANAH PUTEH", "SMK SENTUL UTAMA", "SK SERI BINTANG UTARA", "SK PEKAN KIMANIS", "SK MALUDAM", "SJKC YUK YIN", "PENANG FREE SCHOOL", "SK BANTAYAN", "SK NANGA MACHAN", "SK SERI KELANA", "SK KUALA MERAH", "SK PETANI JAYA", "SK SALIKU", "SK (LKTP) KERATONG 4", "SK TAMAN MELAWATI", "SK TELOK GADONG", "SK KUNAK JAYA", "PPD SIBU", "SK TELUK KETAPANG", "SK TEMELONG", "SMK RANTAU", "SK BUNUT PAYONG", "SK KUALA SALONG", "SK NILAI IMPIAN"];
+(function () {
+  var list = document.getElementById('feedList'), feed = document.getElementById('feed');
+  var btn = document.getElementById('feedBtn'), kiraan = document.getElementById('kiraan');
+  var kurangGerak = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var campur = SEKOLAH.slice().sort(function () { return Math.random() - .5; });
+  var i = 0, tampak = false, jeda = kurangGerak, timer;
+
+  function baris(nama) {
+    var li = document.createElement('li'), tag = document.createElement('span');
+    var isi = document.createElement('span'), b = document.createElement('b'), s = document.createElement('small');
+    tag.className = 'jenis';
+    var kata = nama.split(' ');
+    tag.textContent = kata[0].length > 5 ? kata.map(function (k) { return k[0]; }).join('').slice(0, 3) : kata[0];
+    b.textContent = nama;
+    s.textContent = 'Tempahan diterima ✓';
+    isi.append(b, s);
+    li.append(tag, isi);
+    return li;
+  }
+  function seterusnya() { var n = campur[i]; i = (i + 1) % campur.length; return n; }
+  function tambah() {
+    var li = baris(seterusnya());
+    li.className = 'masuk';
+    list.prepend(li);
+    if (list.children.length > 6) list.lastElementChild.remove();
+  }
+  function jadual() {
+    clearTimeout(timer);
+    if (jeda || !tampak) return;
+    timer = setTimeout(function () { tambah(); jadual(); }, 1600 + Math.random() * 2400);
+  }
+  for (var n = 0; n < 6; n++) list.append(baris(seterusnya()));
+
+  btn.hidden = kurangGerak;
+  feed.classList.toggle('rehat', kurangGerak);
+  btn.addEventListener('click', function () {
+    jeda = !jeda;
+    btn.textContent = jeda ? 'Sambung' : 'Jeda';
+    btn.setAttribute('aria-pressed', jeda);
+    feed.classList.toggle('rehat', jeda);
+    jadual();
+  });
+
+  document.getElementById('bilSemua').textContent = SEKOLAH.length + ' nama';
+  var semua = document.getElementById('senaraiSemua');
+  SEKOLAH.slice().sort().forEach(function (nama) {
+    var s = document.createElement('span');
+    s.textContent = nama;
+    semua.append(s);
+  });
+
+  // Hanya bergerak bila kelihatan; kiraan naik sekali sahaja hingga 643
+  var dikira = false;
+  function kiraNaik() {
+    if (dikira || kurangGerak) return;
+    dikira = true;
+    var mula = performance.now();
+    (function langkah(t) {
+      var p = Math.min((t - mula) / 1400, 1);
+      kiraan.textContent = Math.round(643 * (1 - Math.pow(1 - p, 3))) + (p === 1 ? '+' : '');
+      if (p < 1) requestAnimationFrame(langkah);
+    })(mula);
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      tampak = es[0].isIntersecting;
+      if (tampak) kiraNaik();
+      jadual();
+    }, { threshold: .2 }).observe(document.getElementById('sekolah'));
+  } else { tampak = true; jadual(); }
+})();
 
 // Animasi masuk
 var rise = document.querySelectorAll('.rise');
